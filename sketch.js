@@ -7,7 +7,7 @@ function setup(){
   background(0);
   noFill();
 }
-
+var timeline = 0;
 var i = 0;
 var w = .5;
 var a = 200;
@@ -18,9 +18,15 @@ function draw(){
   ellipse(0, height/2, i)
   stroke(0,0,255,a);
   ellipse(width, height/2, i)
-  // i+=15;
-  i += 20 + w * 3;
-  w += .1;
-  a -= 2.5;
-  if (i > 2 * width) {noLoop()}
+  if (timeline <= 10){
+    i += 20 + w * 3;
+    w += .1;
+    a -= 2.5;
+    if (i > 2 * width) {
+      i = 0;
+      w -=5;
+      a = 200;
+      timeline++;
+    }
+  }
 }
