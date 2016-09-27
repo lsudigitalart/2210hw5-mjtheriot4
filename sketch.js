@@ -9,7 +9,7 @@ function setup (){
   background(0);
   rectMode(CENTER);
   angleMode(DEGREES);
-  stroke(150);
+  stroke(250);
 }
 function draw(){
   translate(width/2,height/2);
